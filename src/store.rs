@@ -3,12 +3,14 @@ use yewdux::prelude::*;
 
 #[derive(Clone, PartialEq, Store, Properties)]
 pub struct YewduxStore {
-    pub count: u32,
+    pub username: String,
+    pub password: String,
+    pub token: String,
 }
 
 impl Default for YewduxStore {
     fn default() -> Self {
-        Self { count: 5 }
+        Self { username: "".to_string(), password: "".to_string(), token:"".to_string() }
     }
 }
 
